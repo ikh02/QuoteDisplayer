@@ -1,0 +1,10 @@
+/angular-ui/dist/
+/angular-ui/node_modules/
+/angular-ui/.angular/cache/
+
+/python-quote-api/__pycache__/
+
+/crystal-analysis-api/lib/
+/crystal-analysis-api/.shards/
+
+.vscode/
