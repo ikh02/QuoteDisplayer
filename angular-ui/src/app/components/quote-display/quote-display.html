@@ -1,17 +1,19 @@
-<div class="card" *ngIf="!isLoading && quote">
-  <p class="quote-text">"{{ quote.text }}"</p>
+<div class="quote-container">
 
-  <div *ngIf="analysis" class="analysis-card">
-    <h4>Analysis (from Crystal Lang)</h4>
-    <ul>
-      <li>Word Count: {{ analysis.word_count }}</li>
-      <li>Character Count: {{ analysis.character_count }}</li>
-    </ul>
+  <div class="card" *ngIf="!isLoading && quote">
+    <p class="quote-text">"{{ quote.text }}"</p>
+
+    <div *ngIf="analysis" class="analysis-card">
+      <h4>Analysis (from Crystal Lang)</h4>
+      <ul>
+        <li>Word Count: <strong>{{ analysis.word_count }}</strong></li>
+        <li>Character Count: <strong>{{ analysis.character_count }}</strong></li>
+      </ul>
+    </div>
   </div>
-</div>
 
-<div *ngIf="isLoading" class="loading-indicator">
-  <p>Loading...</p>
+  <div *ngIf="isLoading" class="loading-spinner"></div>
+
 </div>
 
 <button (click)="onNewQuoteClick()" [disabled]="isLoading">
